@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { heroIcons } from "../../data/constants";
 import HeroButtons from "./HeroButtons";
 import { motion } from "framer-motion";
+import BuyBox from "./BuyBox";
 
 export default function Hero() {
   return (
@@ -80,6 +81,7 @@ export default function Hero() {
           />
         </div>
 
+        <BuyBox />
         {/* <motion.img
           initial={{ opacity: 0, translateY: "-100%" }}
           whileInView={{ opacity: 1, translateY: "0%" }}

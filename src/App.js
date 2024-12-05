@@ -25,25 +25,6 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 
-const avalanche = {
-  id: 43_114,
-  name: 'Avalanche',
-  iconUrl: 'https://s2.coinmarketcap.com/static/img/coins/64x64/5805.png',
-  iconBackground: '#fff',
-  nativeCurrency: { name: 'Avalanche', symbol: 'AVAX', decimals: 18 },
-  rpcUrls: {
-    default: { http: ['https://api.avax.network/ext/bc/C/rpc'] },
-  },
-  blockExplorers: {
-    default: { name: 'SnowTrace', url: 'https://snowtrace.io' },
-  },
-  contracts: {
-    multicall3: {
-      address: '0xca11bde05977b3631167028862be2a173976ca11',
-      blockCreated: 11_907_934,
-    },
-  },
-}
 
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
@@ -55,6 +36,10 @@ const config = getDefaultConfig({
   transports: {
     [mainnet.id]: http('https://eth-mainnet.g.alchemy.com/v2/...'),
     [sepolia.id]: http('https://eth-sepolia.g.alchemy.com/v2/...'),
+    [bsc.id]: http('https://bsc-dataseed.binance.org/'), // BSC Mainnet RPC
+    [optimism.id]: http('https://optimism-mainnet.infura.io/v3/...'), // Replace with your Infura Optimism API key
+    [arbitrum.id]: http('https://arbitrum-mainnet.infura.io/v3/...'), // Replace with your Infura Arbitrum API key
+    [base.id]: http('https://base-mainnet.g.alchemy.com/v2/...'), // Replace with your Alchemy Base API key
   },
 });
 

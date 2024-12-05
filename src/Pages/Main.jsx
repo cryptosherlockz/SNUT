@@ -3,7 +3,6 @@ import {
   Hero,
   About,
   How,
-  BuyBox,
   Tokenomics,
   Roadmap,
   Contact,
@@ -15,7 +14,6 @@ export default function Main() {
       <Hero />
       <About />
       <How />
-      <BuyBox />
       <Tokenomics />
       <Roadmap />
       <Contact />
