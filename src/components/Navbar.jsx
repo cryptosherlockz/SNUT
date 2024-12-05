@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { navlinks } from "../data/constants";
 import { motion } from "framer-motion";
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -48,9 +49,9 @@ export default function Navbar() {
           })}
         </motion.div>
         <motion.div
-          className="text-white font-inter py-2 px-5 border  rounded-3xl cursor-pointer"
-          initial={{ opacity: 0, translateY: "100%" }}
-          whileInView={{ opacity: 1, translateY: "0%" }}
+          className="text-white font-inter py-2 px-5   rounded-3xl cursor-pointer"
+          // initial={{ opacity: 0, translateY: "100%" }}
+          // whileInView={{ opacity: 1, translateY: "0%" }}
           transition={{
             delay: 0.3,
             duration: 0.5,
@@ -59,7 +60,16 @@ export default function Navbar() {
           }}
           viewport={{ once: true, amount: 0.5 }}
         >
-          Buy Now
+          <div><ConnectButton 
+          // chainStatus="name"
+          // showBalance={{
+          //   smallScreen: false,
+          //   largeScreen: true,
+          // }}
+          accountStatus={{
+            smallScreen: 'avatar',
+            largeScreen: 'full',
+          }}/></div>
         </motion.div>
 
         <img
